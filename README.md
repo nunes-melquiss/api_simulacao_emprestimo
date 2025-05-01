@@ -6,7 +6,7 @@ Foi suprimido a utilização de cache (nessa aplicação temos arquivos fixos, c
 
 A estrutura do controller e do gerenciador de rotas foi pensada visando a possibilidade de versionamento das apis.
 
-Os  arquivos json forma armazenados em resources/app/private/json.
+Os  arquivos json foram armazenados em resources/app/private/json.
 
 A lógica da api foi elaborada conforme solicitado.
 
