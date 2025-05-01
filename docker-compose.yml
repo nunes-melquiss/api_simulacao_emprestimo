@@ -1,0 +1,22 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .docker/php/Dockerfile
+    container_name: laravel-app
+    volumes:
+      - ./src:/var/www
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+
+  webserver:
+    image: nginx:alpine
+    container_name: laravel-webserver
+    ports:
+      - "8000:80"
+    volumes:
+      - ./src:/var/www
+      - ./.docker/nginx:/etc/nginx/conf.d
+    depends_on:
+      - app
